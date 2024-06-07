@@ -18,20 +18,55 @@ pip install pygame
 
 pygame is already installed in pydroid3, no installation required.
 
-## Usage
+## Game Mechanics
 
-Navigate and click main.py to run the game. Then tap on the screen to start playing the game. The objective of the game is to destroy as much enemy planes or choppers as possible without getting destroyed. 
+### Objective
 
-Controls:
-* Press left arrow key to go left
-* Press right arrow key to go right
-* Press space key to go shoot
-* Press esc key to quit
+In Aeroblasters, you control a plane aiming to survive as long as possible while destroying enemy planes, avoiding their bullets, and collecting fuel and power-ups.
 
-When playing with mouse or on pydroid3
-* Press left half of game window to go left
-* Press right half of game window to go right
-* Click on player plane to shoot
+### Controls
+
+- **Move Left**: `Left Arrow Key` or `Click/Tap` on the left half of the screen.
+- **Move Right**: `Right Arrow Key` or `Click/Tap` on the right half of the screen.
+- **Shoot**: `Spacebar` or `Click/Tap` on the plane.
+
+### Gameplay
+
+#### Player
+
+- **Movement**: The player can move left or right within the screen bounds.
+- **Shooting**: The player can shoot bullets to destroy enemy planes.
+- **Health**: The player starts with 100 health points. Getting hit by enemy bullets or colliding with enemy planes reduces health. When health reaches 0, the player dies.
+- **Fuel**: The player starts with 100 fuel points which deplete over time. Collecting fuel power-ups replenishes fuel. If fuel drops below -10, the game ends.
+- **Power-ups**: Collecting power-ups allows the player to shoot multiple bullets simultaneously for a limited time.
+
+#### Enemies
+
+- **Types**: There are different types of enemy planes and choppers. Each has different health and shooting patterns.
+- **Shooting**: Enemies shoot bullets that the player must avoid. Enemy bullets cause damage to the player upon collision.
+- **Health**: Enemies have health points that decrease when hit by player bullets. Upon reaching 0 health, enemies explode.
+
+#### Bullets
+
+- **Player Bullets**: The player can shoot single or multiple bullets depending on collected power-ups. Bullets deal damage to enemies upon collision.
+- **Enemy Bullets**: Enemies shoot bullets that damage the player upon collision.
+
+#### Explosions
+
+- Explosions occur when the player or enemies are destroyed. They are animated effects to indicate destruction.
+
+#### Fuel and Power-ups
+
+- **Fuel**: Fuel icons appear randomly and move downwards. Collecting them replenishes the player's fuel.
+- **Power-ups**: Power-up icons also appear randomly and grant the player temporary abilities to shoot multiple bullets.
+
+#### Scoring
+
+- The player's score increases over time based on survival duration and the number of enemies destroyed.
+
+### Levels
+
+- The game increases in difficulty with each level, introducing more challenging enemies and more frequent attacks.
 
 ## Objects and Methods 
 
